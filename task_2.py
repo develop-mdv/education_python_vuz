@@ -12,7 +12,7 @@ hour = int(input().split()[1])
 minute = int(input().split()[1])
 seconds = int(input().split()[1])
 seconds_from_midnight = hour*3600 + minute*60 + seconds
-day_part = seconds_from_midnight/24*3600
+day_part = seconds_from_midnight/(24*3600)
 print(f'seconds:{seconds_from_midnight}')
 print(f'day part:{day_part}')
 
