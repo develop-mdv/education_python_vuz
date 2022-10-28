@@ -111,4 +111,5 @@ if __name__ == '__main__':
     plt.xlabel('N/100000')
     plt.ylabel('Time')
     plt.legend(['при нахождении суммы до 5', 'при перемножении до 5'])
+    # plt.savefig('lab_1_time_metric.png')
     plt.show()
