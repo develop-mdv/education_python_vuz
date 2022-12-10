@@ -1,0 +1,40 @@
+def qwe(a: float, b: float, c: float) -> [bool, str]:
+    flag = True
+    if a > b + c:
+        flag = False
+    elif b > a + c:
+        flag = False
+    elif c > a + b:
+        flag = False
+    if a == b and b == c:
+        return flag, 'ravnostoronni'
+    if a == b or a == c or c == b:
+        return flag, 'ravnobedrennii'
+    return flag, 'obichnii'
+
+
+def qwe_2(s: str):
+    a = s.split()
+    s = s.replace(' ', '')
+    s = s.lower()
+    if s == s[::-1]:
+        print('Stroka - polindrom')
+    else:
+        print('Stroka - ne palindrom')
+    print(len(a))
+    alf = list(a[1])
+    flag = True
+    for word in a:
+        for char in word:
+            if char not in alf or word.count(char) != alf.count(char):
+                flag = False
+                break
+    if flag:
+        print('Vse slova - ne anogramma')
+    else:
+        print('Vse slova - anagrammi')
+
+
+if __name__ == '__main__':
+    print(qwe(3, 4, 5))
+    qwe_2('qwe qwe ewq ewQ')
